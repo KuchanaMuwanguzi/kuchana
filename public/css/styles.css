@@ -1,0 +1,15 @@
+.custom-bg-color {
+  background-color: orange;
+}
+
+.navbar-nav {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.nav-item {
+  padding: 0px 20px;
+}

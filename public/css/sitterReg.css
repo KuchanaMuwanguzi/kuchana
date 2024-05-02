@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+  }
+  body{
+    background: url(/images/tested3.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+  }
+  
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .form-box{
+    position: relative;
+    width: 400px;
+    height: auto;
+    border: 2px solid rgba(255, 255, 2550.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .form-box h2{
+    color: white;
+    text-align: center;
+    font-size: 32px;
+    margin-top: 10px;
+  }
+  
+  .form-box .input-box{
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid white;
+  }
+  
+  .form-box .input-box input{
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    border: none;
+    padding: 0 20px 0 5px;
+    color: white;
+    font-size: 16px;
+  }
+  
+  input::placeholder{
+    color: white;
+  }
+  
+  .btn{
+    display: block;
+     width: 100%;
+     height: 40px;
+     border-radius: 5px;
+     outline: none;
+     border: none;
+     margin-top: 10px;
+     margin-bottom: 10px;
+     font-size: 17px;
+     padding: 10px;
+     cursor: pointer;
+  }
+  
+  .btn:hover{
+    color: white;
+    background: gray;
+  }
+  
+  #result{
+    color: red;
+    font-weight: 600;
+    position: relative;
+    top: 25px;
+  }
+  
+  .gender-box{
+    margin: 15pxx 0;
+    color: white;
+  }
+  
+  .gender-box label{
+    padding: 0 20px 0 5px;
+  }
+  
+  @media (max-width: 600px){
+    .container{
+      padding: 10px;
+      min-width: none;
+    }
+  
+    .input-box{
+      margin-bottom: 12px;
+      width: 100%;
+    }
+    .gender-box{
+      display: flex;
+      justify-content: space-between;
+      width: 100px;
+    }
+  
+    .form-box::-webkit-scrollbar{
+      width: 0;
+    }
+  }
