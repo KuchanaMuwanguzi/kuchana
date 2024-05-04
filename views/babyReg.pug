@@ -1,0 +1,33 @@
+meta(charset='UTF-8')
+meta(name='viewport' content='width=device-width,initial-scale=1')
+title Registration Form
+link(rel='stylesheet' href='/css/babyReg.css')
+.container
+  .form-box
+    form#Fillform(action='#')
+      h2 Register Baby
+      p#result
+      .input-box
+        input#fullName(type='text' name='fullName' placeholder='enter baby\'s name')
+      .input-box
+        input#dob(type='date' name='dob' placeholder='enter Date of Birth')
+      #gender.gender-box
+        input#male(type='radio' name='gender')
+        label(for='male') Male
+        input#female(type='radio' name='gender')
+        label(for='female') Female
+      .input-box
+        input#location(type='text' name='location' placeholder='enter location')
+      .input-box
+        input#motherName(type='text' name='motherName' placeholder='enter mother\'s name')
+      .input-box
+        input#motherContact(type='text' name='motherContact' placeholder='enter mother\'s contact')
+      .input-box
+        input#fatherName(type='text' name='fatherName' placeholder='enter father\'s name')
+      .input-box
+        input#fatherContact(type='text' name='fatherContact' placeholder='enter father\'s contact')
+      .input-box
+        input#babyNumber(type='text' name='babyNumber' placeholder='enter baby number')
+      .button
+        input.btn#Register(type='submit' onclick='register()')
+script(src='/js/babyReg.js')

@@ -1,0 +1,33 @@
+meta(charset='UTF-8')
+meta(name='viewport' content='width=device-width,initial-scale=1')
+title Registration Form
+link(rel='stylesheet' href='/css/sitterReg.css')
+.container
+  .form-box
+    form#Fillform(action='#')
+      h2 Register Sitter
+      p#result
+      .input-box
+        input#fullName(type='text' name='fullName' placeholder='Type full name')
+      .input-box
+        input#location(type='text' name='location' placeholder='Enter location')
+      .input-box
+        input#nin(type='text' name='nin' placeholder='Enter NIN')
+      .input-box
+        input(type='text' name='contact' placeholder='Enter contact')
+      .input-box
+        input#recommender(type='text' name='recommender' placeholder='Recommender\'s name')
+      .input-box
+        input#educationLevel(type='text' name='educationLevel' placeholder='Level of Education')
+      .input-box
+        input#dob(type='date' name='dob' placeholder='Enter Date of Birth')
+      #gender.gender-box
+        input#male(type='radio' name='gender')
+        label(for='male') Male
+        input#female(type='radio' name='gender')
+        label(for='female') Female
+      .input-box
+        input#sitterNumber(type='text' name='sitterNumber' placeholder='Enter sitterNumber')
+      .button
+        input.btn#Register(type='submit' onclick='register()')
+script(src='/js/sitterReg.js')

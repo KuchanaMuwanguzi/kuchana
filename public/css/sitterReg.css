@@ -5,7 +5,7 @@
     font-family: "poppins", sans-serif;
   }
   body{
-    background: url(/images/tested3.jpg) no-repeat;
+    background: url(/assets/images/tested3.jpg) no-repeat;
     background-position: center;
     background-size: cover;
     min-height: 100vh;
