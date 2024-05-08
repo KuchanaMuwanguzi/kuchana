@@ -26,7 +26,7 @@ document.getElementById('adminForm').addEventListener('submit', function(event) 
     localStorage.setItem('adminData', adminDataJSON);
     
     // Display success message
-    alert('Admin registration successful!');
+    //alert('Admin registration successful!');
     
     // Reset form
     document.getElementById('adminForm').reset();
