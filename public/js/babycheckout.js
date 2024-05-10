@@ -4,14 +4,14 @@ document.getElementById('checkoutForm').addEventListener('submit', function(even
   event.preventDefault();
 
   // Get form values
-  var name = document.getElementById('name').value;
-  var pickedBy = document.getElementById('pickedBy').value;
-  var phone = document.getElementById('phone').value;
-  var checkout = document.getElementById('checkout').value;
-  var notes = document.getElementById('notes').value;
+  let babyName = document.getElementById('babyName').value;
+  let guardian = document.getElementById('guardian').value;
+  let phone = document.getElementById('phone').value;
+  let checkout = document.getElementById('checkout').value;
+  let notes = document.getElementById('notes').value;
 
   // Perform validation
-  if (name.trim() === '' || pickedBy.trim() === '' || phone.trim() === '' || checkout.trim() === '') {
+  if (babyName.trim() === '' || guardian.trim() === '' || phone.trim() === '' || checkout.trim() === '') {
       alert('Please fill in all required fields.');
   } else {
       // Display success message

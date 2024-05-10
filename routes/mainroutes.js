@@ -48,4 +48,11 @@ router.post('/sitterReg', (req, res)=>{
     res.render(path.join(__dirname, '../views/sitterReg'));
 })
 
+router.get('/login', (req, res)=>{
+    res.render(path.join(__dirname, '../views/login'))
+})
+
+router.post('/login', passport.authenticate("local",{failureRedirect:"/login"}), (req, res)=>{
+    res.json({message: 'login successful'})
+})
 module.exports = router

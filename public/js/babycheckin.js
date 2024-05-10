@@ -3,16 +3,16 @@ function checkIn(event) {
   event.preventDefault();
 
   // Get form values
-  var babyName = document.getElementById('babyName').value;
-  var broughtBy = document.getElementById('broughtBy').value;
-  var phone = document.getElementById('phone').value;
-  var periodOfStay = document.getElementById('periodOfStay').value;
-  var amountPaid = document.getElementById('amountPaid').value;
-  var checkin = document.getElementById('checkin').value;
-  var notes = document.getElementById('notes').value;
+  let babyName = document.getElementById('babyName').value;
+  let guardian = document.getElementById('guardian').value;
+  let phone = document.getElementById('phone').value;
+  let periodOfStay = document.getElementById('periodOfStay').value;
+  let amountPaid = document.getElementById('amountPaid').value;
+  let checkin = document.getElementById('checkin').value;
+  let notes = document.getElementById('notes').value;
 
   // Validation: Ensure all fields are filled
-  if (babyName.trim() === '' || broughtBy.trim() === '' || phone.trim() === '' || periodOfStay.trim() === '' || amountPaid.trim() === '' || checkin.trim() === '') {
+  if (babyName.trim() === '' || guardian.trim() === '' || phone.trim() === '' || periodOfStay.trim() === '' || amountPaid.trim() === '' || checkin.trim() === '') {
       alert('Please fill in all required fields.');
       return;
   }

@@ -47,6 +47,11 @@ const SitterSchema = new Schema({
         type: String,
         required: true,
     },
+
+    present: {
+        type: Boolean,
+        default: false,
+    }
 })
 
 
