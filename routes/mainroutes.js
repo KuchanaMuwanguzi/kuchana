@@ -39,7 +39,6 @@ router.get('/babyReg', (req, res)=>{
     res.render(path.join(__dirname, '../views/babyReg'));
 })
 
-
 router.get('/sitterReg', (req, res)=>{
     res.render(path.join(__dirname, '../views/sitterReg'));
 })
@@ -55,4 +54,17 @@ router.get('/login', (req, res)=>{
 router.post('/login', passport.authenticate("local",{failureRedirect:"/login"}), (req, res)=>{
     res.json({message: 'login successful'})
 })
+
+//{RECONCILE  line 10-14}
+router.post("/Adminregister", async(req,res,next) => {
+    try {
+    const admin = new AdminModel(req.body)
+        console.log(admin)
+        await AdminModel.register(admin,req.body.Password)
+    }catch(error){
+        res.status().Send ("cound't register admin")
+        console.log(error)
+    }
+})
+
 module.exports = router
