@@ -48,11 +48,15 @@ router.post('/sitterReg', (req, res)=>{
 })
 
 router.get('/login', (req, res)=>{
-    res.render(path.join(__dirname, '../views/login'))
+    res.render(path.join(__dirname, '../views/login.pug'))
 })
 
 router.post('/login', passport.authenticate("local",{failureRedirect:"/login"}), (req, res)=>{
     res.json({message: 'login successful'})
+})
+
+router.get('/landing', (req, res)=> {
+    res.render(path.join(__dirname, '../views/landing.pug'))
 })
 
 //{RECONCILE  line 10-14}
