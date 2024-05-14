@@ -1,8 +1,9 @@
-//adding the exxpress
+//adding the express
 const express= require('express');
 const app= express();
-
-const Admin= require('./models/Admin')
+const session= require('express-session');
+const passport= require('passport');
+const Admin= require('./models/Admin');
 const mongoose = require("mongoose");
 
 require('dotenv') .config();

@@ -1,11 +1,14 @@
 const router = require("express").Router();
-
+const passport = require("passport");
 const path = require("path");
 const {
   registerAdmin,
   registerBaby,
   registerSitter,
 } = require("../controllers/RegController.js");
+const ensurelogin= require('connect-ensure-login');
+const Admin = require("../models/Admin.js");
+
 
 router.get("/index", (req, res) => {
   res.render(path.join(__dirname, "../views/index"));
@@ -17,11 +20,12 @@ router.get("/adminReg", (req, res) => {
 
 router.post("/adminReg", async (req, res, next) => {
   try {
-    const admin = new AdminModel(req.body);
+    const admin = new Admin(req.body);
     console.log(admin);
-    await AdminModel.register(admin, req.body.Password);
+    await Admin.register(admin, req.body.password);
+    res.redirect("/index");
   } catch (error) {
-    res.status().Send("cound't register admin");
+    res.status(400).send("cound't register admin");
     console.log(error);
   }
 });
@@ -66,6 +70,7 @@ router.post(
   "/login",
   passport.authenticate("local", { failureRedirect: "/login" }),
   (req, res) => {
+    res.redirect('/index')
     res.json({ message: "login successful" });
   }
 );
@@ -77,6 +82,5 @@ router.get("/landing", (req, res) => {
 router.post("/landing", (req, res) => {
   res.render(path.join(__dirname, "../views/landing"));
 });
-
 
 module.exports = router;

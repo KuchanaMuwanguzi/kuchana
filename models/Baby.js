@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema 
 
 const BabySchema = new Schema({
-    name: {
+    fName: {
         type: String,
         required: true,
         unique: true,
