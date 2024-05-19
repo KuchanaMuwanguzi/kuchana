@@ -72,8 +72,7 @@ router.post(
   (req, res) => {
     res.redirect('/index')
     res.json({ message: "login successful" });
-  }
-);
+});
 
 router.get("/landing", (req, res) => {
   res.render(path.join(__dirname, "../views/landing"));

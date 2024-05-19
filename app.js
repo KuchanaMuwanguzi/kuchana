@@ -1,5 +1,7 @@
-//adding the express
+//adding the express Dependencies
 const express= require('express');
+
+//instatiations
 const app= express();
 const session= require('express-session');
 const passport= require('passport');
@@ -10,8 +12,9 @@ require('dotenv') .config();
 
 const path = require('path');
 
-app.use(express.json({ extended: false }));
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json({ extended: false }));
+
 
 app.use(express.static(path.join(__dirname, './public')))
 
@@ -37,13 +40,18 @@ app.use(passport.session());
 //connecting to database
 mongoose.connect(process.env.MONGODB_URL, {})
 .then(()=> console.log("connected to database"))
-.catch(()=> console.log("error connecting to database"))
+.catch(()=> console.log("error connecting to database"));
 
-app.set('view engine', 'pug')
+app.set('view engine', 'pug');
 
-app.use('/', require('./routes/mainroutes'))
+app.use('/', require('./routes/mainroutes'));
 
 
+
+//invalid routes
+app.get('*', (req, res) => {
+    res.send('404! Oops!! Invalid URL.');
+  });
 
 //server listening to port
 app.listen(3000, () => {
