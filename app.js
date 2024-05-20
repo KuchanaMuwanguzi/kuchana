@@ -11,7 +11,7 @@ const mongoose = require("mongoose");
 require('dotenv') .config();
 
 const path = require('path');
-
+//midleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json({ extended: false }));
 
