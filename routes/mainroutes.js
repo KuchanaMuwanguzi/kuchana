@@ -1,3 +1,4 @@
+const express = require('express');
 const router = require("express").Router();
 const passport = require("passport");
 const path = require("path");
@@ -8,6 +9,9 @@ const {
 } = require("../controllers/RegController.js");
 const ensurelogin= require('connect-ensure-login');
 const Admin = require("../models/Admin.js");
+const Baby = require('../models/Baby.js');
+const Sitter = require('../models/Sitter.js');
+const Payments = require('../models/Payments.js')
 
 
 router.get("/index", (req, res) => {

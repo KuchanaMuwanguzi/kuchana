@@ -1,4 +1,4 @@
-//adding the express Dependencies
+//express Dependencies
 const express= require('express');
 
 //instatiations
@@ -11,12 +11,14 @@ const mongoose = require("mongoose");
 require('dotenv') .config();
 
 const path = require('path');
+
 //midleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json({ extended: false }));
 
-
-app.use(express.static(path.join(__dirname, './public')))
+app.set('view engine', 'pug'); //sets view engine to pug
+app.set('views', path.join(__dirname, 'views')); //specifies views directory
+app.use(express.static(path.join(__dirname, './public'))) //sets directory for stattic files
 
 //initializing express session storage
 app.use(session({
