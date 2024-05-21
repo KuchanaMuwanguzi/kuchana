@@ -34,13 +34,25 @@
       </div>
       <div class="mb-3">
         <label for="amountPaid" class="form-label">Amount Paid (UGX):</label>
-        <input type="number" class="form-control" id="amountPaid" placeholder="e.g., 50000">
+        <input type="number" class="form-control" id="amountPaid" placeholder="e.g., 20,000">
       </div>
 
       <div class="mb-3">
         <label for="checkin" class="form-label">Check-in Date and Time</label>
         <input type="datetime-local" class="form-control" id="checkin">
       </div>
+
+      <div class="mb-3">
+        <label for="courses" class="form-label">Assign Sitter</label>
+        <div class="col-sm-9">
+            <select id="courses" class="form-select">
+                <option selected>-Available Sitters-</option>
+                <option value="Nana">Nana</option>
+                <option value="Teddy">Teddy</option>
+                <option value="Viola">Viola</option>
+            </select>
+        </div>
+    </div>
 
       <div class="mb-3">
         <textarea class="form-control" id="notes" rows="3" placeholder="Any special instructions or notes"></textarea>
