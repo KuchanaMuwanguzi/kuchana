@@ -6,26 +6,22 @@ link(rel='stylesheet' href='/css/styles.css')
 nav.navbar.navbar-expand-lg.custom-bg-color
   .container-fluid
     a.navbar-brand(href='#')
-      img.d-inline-block.align-text-top(src='/public/assets/images/yellow logo.png' alt='Logo' width='150' height='130')
+      img.d-inline-block.align-text-top(src='/assets/images/yellow logo.png' alt='Logo' width='150' height='130')
     .collapse.navbar-collapse#navbarNavDropdown
       ul.nav.nav-pills.nav-fill.gap-2.p-1.small.rounded-5.shadow-sm#pillNav2(role='tablist' style='--bs-nav-link-color: var(--bs-white); --bs-nav-pills-link-active-color: var(--bs-primary); --bs-nav-pills-link-active-bg: var(--bs-white);')
         li.nav-item(role='presentation')
-          button.nav-link.active.rounded-5#home-tab2(data-bs-toggle='tab' type='button' role='tab' aria-selected='true') Home
-        li.nav-item(role='presentation')
-          button.nav-link.rounded-5#profile-tab2(data-bs-toggle='tab' type='button' role='tab' aria-selected='false') Profile
-        li.nav-item(role='presentation')
-          button.nav-link.rounded-5#contact-tab2(data-bs-toggle='tab' type='button' role='tab' aria-selected='false') Contact
+          button.nav-link.rounded-5#profile-tab2(data-bs-toggle='tab' type='button' role='tab' aria-selected='false' href=('/views/payments.pug')) Payments
         li.nav-item(role='presentation')
           button.nav-link.rounded-5#contact-tab2(data-bs-toggle='tab' type='button' role='tab' aria-selected='false') Doll Stall
         li.nav-item.dropdown(role='presentation')
           button.nav-link.rounded-5.dropdown-toggle#contact-tab2(data-bs-toggle='tab' type='button' role='tab' aria-selected='false') Babies
           ul.dropdown-menu
             li
-              a.dropdown-item(href='#') Baby list
+              a.dropdown-item(href='/babylist') Baby list
             li
-              a.dropdown-item(href='/views/babycheckin.pug') Baby checkin
+              a.dropdown-item(href='/babycheckin') Baby checkin
             li
-              a.dropdown-item(href='/views/babycheckout.pug') Baby checkout
+              a.dropdown-item(href='/babycheckout') Baby checkout
         li.nav-item.dropdown(role='presentation')
           button.nav-link.rounded-5.dropdown-toggle#contact-tab2(data-bs-toggle='tab' type='button' role='tab' aria-selected='false') Sitters
           ul.dropdown-menu
@@ -39,34 +35,34 @@ nav.navbar.navbar-expand-lg.custom-bg-color
           button.nav-link.rounded-5.dropdown-toggle#contact-tab2(data-bs-toggle='tab' type='button' role='tab' aria-selected='false') Register
           ul.dropdown-menu
             li
-              a.dropdown-item(href='/views/sitterReg.pug') New Sitter
+              a.dropdown-item(href='/sitterReg') New Sitter
             li
-              a.dropdown-item(href='/views/babyReg.pug') New Baby
+              a.dropdown-item(href='/babyReg') New Baby
             li
-              a.dropdown-item(href='/views/adminReg.pug') New Admin
+              a.dropdown-item(href='/adminReg') New Admin
 .container.mt-5
   .row
     .col-md-3
       .card
-        img.card-img-top(src='/public/assets/images/yellow logo.png' alt='Image 1')
+        img.card-img-top(src='/assets/blackbaby01.jpeg' alt='Image 1')
         .card-body
           h5.card-title Card 1
           p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
     .col-md-3
       .card
-        img.card-img-top(src='/public/assets/images/background baby.jpg' alt='Image 2')
+        img.card-img-top(src='/assets/images/background baby.jpg' alt='Image 2')
         .card-body
           h5.card-title Card 2
           p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
     .col-md-3
       .card
-        img.card-img-top(src='/public/assets/images/tested2.jpg' alt='Image 3')
+        img.card-img-top(src='/assets/images/tested2.jpg' alt='Image 3')
         .card-body
           h5.card-title Card 3
           p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
     .col-md-3
       .card
-        img.card-img-top(src='/public/assets/images/tested.jpg' alt='Image 4')
+        img.card-img-top(src='/assets/images/tested.jpg' alt='Image 4')
         .card-body
           h5.card-title Card 4
           p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
