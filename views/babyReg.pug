@@ -4,7 +4,7 @@ title Registration Form
 link(rel='stylesheet' href='/css/babyReg.css')
 .container
   .form-box
-    form#Fillform(action='#')
+    form#Fillform(action='/babyReg' method='POST')
       h2 Register Baby
       p#result
       .input-box
@@ -19,15 +19,11 @@ link(rel='stylesheet' href='/css/babyReg.css')
       .input-box
         input#location(type='text' name='location' placeholder='enter location')
       .input-box
-        input#motherName(type='text' name='motherName' placeholder='enter mother\'s name')
+        input#parentName(type='text' name='parentName' placeholder='enter parent\'s name')
       .input-box
-        input#motherContact(type='text' name='motherContact' placeholder='enter mother\'s contact')
-      .input-box
-        input#fatherName(type='text' name='fatherName' placeholder='enter father\'s name')
-      .input-box
-        input#fatherContact(type='text' name='fatherContact' placeholder='enter father\'s contact')
+        input#parentContact(type='text' name='parentContact' placeholder='enter parent\'s contact')
       .input-box
         input#babyNumber(type='text' name='babyNumber' placeholder='enter baby number')
       .button
-        input.btn#Register(type='submit' onclick='register()')
-script(src='/js/babyReg.js')
+        button.btn#Register(type='submit')
+//script(src='/js/babyReg.js')

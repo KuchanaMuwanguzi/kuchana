@@ -27,7 +27,7 @@ function register() {
     let sitterDataJSON = JSON.stringify(sitterData);
 
     // Store the JSON string in local storage
-    localStorage.setItem("sitterData", sitterDataJSON);
+   // localStorage.setItem("sitterData", sitterDataJSON);
     
-    alert("Sitter registered successfully!");
+   // alert("Sitter registered successfully!");
   }

@@ -23,30 +23,20 @@ const BabySchema = new Schema({
         required: true,
     },
 
-    motherName: {
+    parentName: {
         type: String,
         required: true,
     },
 
-    motherContact: {
+    parentContact: {
         type: String,
         required: true,
     },
-
-    fatherName: {
-        type: String,
-        required: true,
-    },
-
-    fatherContact: {
-        type: String,
-        required: true,
-    }, 
 
     babyNumber: {
         type: String,
         required: true,
-    },
+    }
 })
 
 module.exports = mongoose.model('Baby', BabySchema)

@@ -1,21 +1,25 @@
 const mongoose = require('mongoose') 
 const Schema = mongoose.Schema 
 
-const PaymentsSchema = new Schema({
-    name: {
+const ProcurementsSchema = new Schema({
+    item: {
         type: String,
         required: true,
     },
 
-    amount: {
+    units: {
         type: Number,
         required: true,
     },
 
-    paid: {
+    pricePerUnit: {
         type: Boolean,
         default: false,
     },
+
+    amount: {
+        type: Number,
+    }
 })
 
-module.exports = mongoose.model('Payments', PaymentsSchema)
+module.exports = mongoose.model('Procurements', ProcurementsSchema)

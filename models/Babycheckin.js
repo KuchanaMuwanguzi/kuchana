@@ -30,10 +30,14 @@ const BabycheckinSchema = new Schema({
         type: Boolean,
         default: false,
     },
+    
+    assignSitter:{
+        type: String,
+    },
 
     notes: {
         type: String,
-    },
+    }
 })
 
 module.exports = mongoose.model('Babycheckin', BabycheckinSchema)

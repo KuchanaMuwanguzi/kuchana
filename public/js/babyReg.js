@@ -4,10 +4,8 @@ document.getElementById('Fillform').addEventListener('submit', function(event) {
   // Get form values
   let fullName = document.getElementById("fullName").value;
   let location = document.getElementById("location").value;
-  let motherName = document.getElementById("motherName").value;
-  let motherContact = document.getElementsByName("motherContact").value;
-  let fatherName = document.getElementById("fatherName").value;
-  let fatherContact = document.getElementById("fatherContact").value;
+  let parentName = document.getElementById("parentName").value;
+  let parentContact = document.getElementsByName("parentContact").value;
   let dob = document.getElementById("dob").value;
   let gender = document.querySelector('input[name="gender"]:checked').value;
   let babyNumber = document.getElementById("babyNumber").value;
@@ -16,10 +14,8 @@ document.getElementById('Fillform').addEventListener('submit', function(event) {
   let babyData = {
       fullName: fullName,
       location: location,
-      motherName: motherName,
-      motherContact: motherContact,
-      fatherName: fatherName,
-      fatherContact: fatherContact,
+      parentName: parentName,
+      parentContact: parentContact,
       dob: dob,
       gender: gender,
       babyNumber: babyNumber
@@ -32,7 +28,7 @@ document.getElementById('Fillform').addEventListener('submit', function(event) {
   localStorage.setItem('babyData', babyDataJSON);
   
   // Display success message
-  alert('Baby registration successful!');
+  //alert('Baby registration successful!');
   
   // Reset form
   document.getElementById('Fillform').reset();

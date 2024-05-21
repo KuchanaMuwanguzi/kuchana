@@ -4,7 +4,7 @@ title Registration Form
 link(rel='stylesheet' href='/css/sitterReg.css')
 .container
   .form-box
-    form#Fillform(action='#')
+    form#Fillform(action='/sitterReg' method='POST')
       h2 Register Sitter
       p#result
       .input-box
@@ -16,7 +16,7 @@ link(rel='stylesheet' href='/css/sitterReg.css')
       .input-box
         input(type='text' name='contact' placeholder='Enter contact')
       .input-box
-        input#recommender(type='text' name='recommender' placeholder='Recommender\'s name')
+        input#recommender(type='text' name='recommenderName' placeholder='Recommender\'s name')
       .input-box
         input#educationLevel(type='text' name='educationLevel' placeholder='Level of Education')
       .input-box
@@ -29,5 +29,5 @@ link(rel='stylesheet' href='/css/sitterReg.css')
       .input-box
         input#sitterNumber(type='text' name='sitterNumber' placeholder='Enter sitterNumber')
       .button
-        input.btn#Register(type='submit' onclick='register()')
-script(src='/js/sitterReg.js')
+        button.btn#Register(type='submit')
+//script(src='/js/sitterReg.js')
